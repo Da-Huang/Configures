@@ -1,0 +1,7 @@
+[user]
+	name = Da-Huang
+	email = dhuang.cn@gmail.com
+[credential]
+	helper = cache --timeout=3600
+[http]
+	proxy = 127.0.0.1:8087
