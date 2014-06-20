@@ -24,8 +24,8 @@
 *.googlelabs.*
 *.googleusercontent.*
 *.gstatic.*
-*guzzservices*
-*hdslb*
+*.guzzservices.*
+*.hdslb.*
 *.irs01.*
 *.kejet.*
 *.kkkmh.*
