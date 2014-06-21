@@ -1,5 +1,5 @@
 ; Summary: Proxy Switchy! Exported Rule List
-; Date: 6/20/2014
+; Date: 6/21/2014
 ; Website: http://bit.ly/proxyswitchy
 
 #BEGIN
@@ -22,9 +22,12 @@
 *.bilibili.*
 *.blogger.*
 *.cnzz.*
+*.*.facebook.*
+*.facebook.*
 *.ggpht.*
 *.google-*.*
 *.google.*
+*.googleapis.*
 *.googlelabs.*
 *.googleusercontent.*
 *.gstatic.*
@@ -36,6 +39,7 @@
 *.kkkmh.*
 *.ktxp.*
 */letv-gug/*
+*/crossdomain.xml
 */letv-uts/*
 *.letv*.*
 */flvfiles/*
@@ -48,24 +52,25 @@
 *.sinaimg.*
 *.soku.*
 *.tanx.*
-*.taobao*.*
 *.*.taobao*.*
+*.taobao*.*
 *.tbcdn.*
 *.tdimg.*
 *.tudou.*
 *.tudouui.*
+https://*.twitter.*
+*.weather.com.cn
 *.wikipedia.*
 *.xiu8.*
 *.xunlei.*
 *.yeah.*
 *.ykimg.*
 */files/*
-*.youku.*
 *.*.youku.*
 */youku/*
+*.youku.*
 *.youtube.*
 *.ytimg.*
-*/crossdomain.xml
 
 [regexp]
 
