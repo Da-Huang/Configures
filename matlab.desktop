@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=matlab
+Exec=matlab
+Terminal=false
+Icon=/usr/share/MATLAB/R2010b/X11/icons/matlab64c_icon.xpm
+Type=Application
+Categories=Development

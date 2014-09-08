@@ -1,0 +1,8 @@
+# Tooltip background color.
+style "eclipse-tooltips" {
+  bg[NORMAL] = "#f5f5b5"
+  fg[NORMAL] = "#000000"
+}
+
+# Load settings.
+widget "gtk-tooltip*" style "eclipse-tooltips"

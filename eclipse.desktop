@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=eclipse
+Exec=eclipse -vm /usr/share/java/jdk1.7.0_60/bin
+Terminal=false
+Icon=/usr/share/eclipse-java/icon.xpm
+Type=Application
+Categories=Development
