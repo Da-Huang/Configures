@@ -5,6 +5,7 @@
 	helper = cache --timeout=3600
 [http]
 	proxy = 127.0.0.1:8087
+	sslVerify = false
 [push]
 	default = matching
 [core]
