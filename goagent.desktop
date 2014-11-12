@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=goagent
+Exec=/media/DISK_D/Program\ Files/goagent/local/proxy.py
+Terminal=true
+#Icon=/usr/share/eclipse-java/icon.xpm
+Type=Application
+Categories=Development
