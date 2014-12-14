@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=idea
+Exec=bash -c "source /etc/bash.bashrc; idea"
+Terminal=false
+Icon=/usr/share/idea/bin/idea.png
+Type=Application
+Categories=Development

@@ -61,8 +61,8 @@ set ignorecase smartcase
 set hls
 set fileencodings=utf8,gb18030
 set viminfo='50,<1000
-# set viminfo='20,<1000,s10,h
-# au BufWritePre * :%s/\s\+$//e 
+" set viminfo='20,<1000,s10,h
+au BufWritePre * :%s/\s\+$//e
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")

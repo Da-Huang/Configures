@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=eclipse
-Exec=eclipse -vm /usr/share/java/jdk/bin
+Exec=bash -c "source /etc/bash.bashrc; eclipse"
 Terminal=false
 Icon=/usr/share/eclipse-java/icon.xpm
 Type=Application
