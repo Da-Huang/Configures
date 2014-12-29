@@ -59,6 +59,7 @@ set backspace=indent,eol,start
 set showmode
 set ignorecase smartcase
 set hls
+set ff=unix
 set fileencodings=utf8,gb18030
 set viminfo='50,<1000
 " set viminfo='20,<1000,s10,h
