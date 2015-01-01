@@ -62,8 +62,8 @@ set hls
 set ff=unix
 set fileencodings=utf8,gb18030
 set viminfo='50,<1000
-" set viminfo='20,<1000,s10,h
 au BufWritePre * :%s/\s\+$//e
+autocmd FileType make setlocal noexpandtab
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
