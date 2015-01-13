@@ -1,9 +1,11 @@
+GXX = $(shell bash -c "compgen -c g++" | sort -r | head -1)
 INCLUDES = -I. $(foreach dir,$(SOURCE_DIR),-I$(dir))
-CXXFLAGS = -std=c++0x -g -Wall -O2 $(INCLUDES)
-LDFLAGS  = -g -Wall -O2
-#LDFLAGS = -lrt -lpthread -lboost_regex -L/path/to/boost/lib -pg -g -Wall
-LD = g++
-CXX = g++
+#DEBUG = -g
+CXXFLAGS = -std=c++11 -Wall -O2 $(INCLUDES) $(DEBUG)
+LDFLAGS  = -pthread
+#LDFLAGS = -lrt -lpthread -lboost_regex -L/path/to/boost/lib -pg
+LD = $(GXX)
+CXX = $(GXX)
 
 TEXT_TEMPLATE = "\033[36mTEXT\033[0m"
 COMMA = ","
@@ -15,16 +17,14 @@ $(shell find . -type d \( ! -path '*/.*' -o -prune \) \( ! -name ".*" \))
 SOURCE_FILES = \
 $(wildcard *.cpp) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.cpp))
 
-#$(patsubst %,$(wildcard %/*.cpp),$(SOURCE_DIR))# $(wildcard field/*.cpp)
-OBJS = $(patsubst %.cpp,%.o,$(SOURCE_FILES))
-DEPS = $(patsubst %.cpp,%.d,$(SOURCE_FILES))
-OUTS = \
-$(wildcard *.o) $(wildcard *.d) $(wildcard *.out) \
-$(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.o)) \
-$(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.d)) \
-$(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.out))
-#OBJS = $(SOURCE_FILES:.cpp=.o)
-#DEPS = $(SOURCE_FILES:.cpp=.d)
+#OBJS = $(patsubst %.cpp,%.o,$(SOURCE_FILES))
+OBJS = $(SOURCE_FILES:.cpp=.o)
+DEPS = $(SOURCE_FILES:.cpp=.d)
+
+EXISTED_DEPS = \
+$(wildcard *.d) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.d))
+EXISTED_OBJS = \
+$(wildcard *.o) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.o))
 
 %.o: %.cpp
 	@echo $(subst TEXT,"Compiling $< and Generating its Dependencies ...",$(TEXT_TEMPLATE))
@@ -38,11 +38,12 @@ $(TARGET): $(OBJS)
 -include $(DEPS)
 
 clean:
-	@echo $(subst TEXT,"Removing $(TARGET)$(COMMA) Object Files$(COMMA) and Dependency Files.",$(TEXT_TEMPLATE))
-	$(RM) $(TARGET)
-#	$(RM) $(OBJS)
-#	$(RM) $(DEPS)
-	$(RM) $(OUTS)
-	@echo $(subst TEXT,"Clean.",$(TEXT_TEMPLATE))
+	@echo $(subst TEXT,"Removing $(TARGET).",$(TEXT_TEMPLATE))
+	@$(RM) $(TARGET)
+	@echo $(subst TEXT,"Removing Object Files.",$(TEXT_TEMPLATE))
+	@$(RM) $(EXISTED_OBJS)
+	@echo $(subst TEXT,"Removing Dependency Files.",$(TEXT_TEMPLATE))
+	@$(RM) $(EXISTED_DEPS)
+	@echo $(subst TEXT,"All Clean.",$(TEXT_TEMPLATE))
 
 .PHONY: clean
