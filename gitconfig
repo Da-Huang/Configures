@@ -1,12 +1,12 @@
 [user]
-	name = Da Huang
-	email = dhuang.cn@gmail.com
+  name = Da Huang
+  email = dhuang.cn@gmail.com
 [credential]
-	helper = cache --timeout=3600
+  helper = cache --timeout=3600
 [http]
-	proxy = 127.0.0.1:8087
-	sslVerify = false
+  proxy = socks5://proxy.acosine.com:8888
+  sslVerify = false
 [push]
-	default = matching
+  default = matching
 [core]
-	editor = vim
+  editor = vim
