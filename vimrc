@@ -54,7 +54,7 @@ set expandtab
 set cindent
 set ai
 set laststatus=2
-set statusline+=%F
+set statusline+=%F::%l,%c
 set backspace=indent,eol,start
 set showmode
 set hls
