@@ -1,67 +1,75 @@
 [SwitchyOmega Conditions]
-; Require: SwitchyOmega >= 2.3.2
-; Date: 5/8/2015
-; Usage: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
+@with result
 
-UrlWildcard: *.126.*
-UrlWildcard: *162.105.*
-UrlWildcard: *.163.*
-UrlWildcard: *.*.163.*
-UrlWildcard: *.51node.*
-UrlWildcard: *.acgvideo.*
-UrlWildcard: *.*.admaster.*
-UrlWildcard: *.*.alibaba.*
-UrlWildcard: *.alicdn.*
-UrlWildcard: *.*.aliimg.*
-UrlWildcard: *.allyes.*
-UrlWildcard: *.baidu*.*
-UrlWildcard: *.bdimg.*
-UrlWildcard: *.bdstatic.*
-UrlWildcard: *.bdwm.*
-UrlWildcard: *.bilibili.*
-UrlWildcard: *.blogger.*
-UrlWildcard: *.cnzz.*
-UrlWildcard: *collabedit.*
-UrlWildcard: *.*.edu.cn*
-UrlWildcard: *.ggpht.*
-UrlWildcard: *guzzservices*
-UrlWildcard: *hdslb*
-UrlWildcard: *.ipinyou.*
-UrlWildcard: *.irs01.*
-UrlWildcard: *.jd.*
-UrlWildcard: *.kejet.*
-UrlWildcard: *.kkkmh.*
-UrlWildcard: */letv-gug/*
-UrlWildcard: *.letv*.*
-UrlWildcard: */letv-uts/*
-UrlWildcard: */flvfiles/*
-UrlWildcard: *.miaozhen.*
-UrlWildcard: *.mofamulu.*
-UrlWildcard: *.*netease.*
-UrlWildcard: *.netease.*
-UrlWildcard: *.poco.*
-UrlWildcard: *.qianqian.*
-UrlWildcard: *.sina.*
-UrlWildcard: *.sinaimg.*
-UrlWildcard: *.*.sohu.*
-UrlWildcard: *.soku.*
-UrlWildcard: *.tanx.*
-UrlWildcard: *.taobao*.*
-UrlWildcard: *.*.taobao*.*
-UrlWildcard: *.tbcdn.*
-UrlWildcard: *.tdimg.*
-UrlWildcard: *.tudou.*
-UrlWildcard: *.tudouui.*
-UrlWildcard: *weibo.com*
-UrlWildcard: *.xiu8.*
-UrlWildcard: *.xunlei.*
-UrlWildcard: *.yeah.*
-UrlWildcard: *.yimgr.*
-UrlWildcard: *.ykimg.*
-UrlWildcard: *.*.youku.*
-UrlWildcard: *.*.*.*/youku/*
-UrlWildcard: */youku/*
-UrlWildcard: *.youku.*
-UrlWildcard: *.ytimg.*
-UrlWildcard: *mail.google.com/*
-UrlWildcard: *talkgadget.google.com/*
+UrlWildcard: *.126.* +direct
+UrlWildcard: *162.105.* +direct
+UrlWildcard: *.163.* +direct
+UrlWildcard: *.*.163.* +direct
+UrlWildcard: *.51node.* +direct
+UrlWildcard: *.acgvideo.* +direct
+UrlWildcard: *.*.admaster.* +direct
+UrlWildcard: *.*.alibaba.* +direct
+UrlWildcard: *.alicdn.* +direct
+UrlWildcard: *.*.aliimg.* +direct
+UrlWildcard: *.allyes.* +direct
+UrlWildcard: *.baidu*.* +direct
+UrlWildcard: *.bdimg.* +direct
+UrlWildcard: *.bdstatic.* +direct
+UrlWildcard: *.bdwm.* +direct
+UrlWildcard: *.bilibili.* +direct
+UrlWildcard: *.blogger.* +direct
+UrlWildcard: *.cnzz.* +direct
+UrlWildcard: *collabedit.* +direct
+UrlWildcard: *.*.edu.cn* +direct
+UrlWildcard: *.ggpht.* +direct
+UrlWildcard: *guzzservices* +direct
+UrlWildcard: *hdslb* +direct
+UrlWildcard: *.ipinyou.* +direct
+UrlWildcard: *.irs01.* +direct
+UrlWildcard: *.jd.* +direct
+UrlWildcard: *.kejet.* +direct
+UrlWildcard: *.kkkmh.* +direct
+UrlWildcard: */letv-gug/* +direct
+UrlWildcard: *.letv*.* +direct
+UrlWildcard: */letv-uts/* +direct
+UrlWildcard: */flvfiles/* +direct
+UrlWildcard: *.miaozhen.* +direct
+UrlWildcard: *.mofamulu.* +direct
+UrlWildcard: *.*netease.* +direct
+UrlWildcard: *.netease.* +direct
+UrlWildcard: *.poco.* +direct
+UrlWildcard: *.qianqian.* +direct
+UrlWildcard: *.sina.* +direct
+UrlWildcard: *.sinaimg.* +direct
+UrlWildcard: *.*.sohu.* +direct
+UrlWildcard: *.soku.* +direct
+UrlWildcard: *.tanx.* +direct
+UrlWildcard: *.taobao*.* +direct
+UrlWildcard: *.*.taobao*.* +direct
+UrlWildcard: *.tbcdn.* +direct
+UrlWildcard: *.tdimg.* +direct
+UrlWildcard: *.tudou.* +direct
+UrlWildcard: *.tudouui.* +direct
+UrlWildcard: *weibo.com* +direct
+UrlWildcard: *.xiu8.* +direct
+UrlWildcard: *.xunlei.* +direct
+UrlWildcard: *.yeah.* +direct
+UrlWildcard: *.yimgr.* +direct
+UrlWildcard: *.ykimg.* +direct
+UrlWildcard: *.*.youku.* +direct
+UrlWildcard: *.*.*.*/youku/* +direct
+UrlWildcard: */youku/* +direct
+UrlWildcard: *.youku.* +direct
+UrlWildcard: *.ytimg.* +direct
+UrlWildcard: *mail.google.com/* +direct
+UrlWildcard: *talkgadget.google.com/* +direct
+UrlWildcard: *.gtimg.* +direct
+UrlWildcard: *.ele.* +direct
+UrlWildcard: *.flvcd.* +direct
+UrlWildcard: *hihocoder.* +direct
+UrlWildcard: *weishi.* +direct
+UrlWildcard: *iqiyi.* +direct
+UrlWildcard: *dmhy.* +direct
+UrlWildcard: *csdn.* +direct
+
+* +acosine
