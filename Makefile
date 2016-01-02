@@ -1,49 +1,64 @@
 GXX = $(shell bash -c "compgen -c g++" | sort -r | head -1)
-INCLUDES = -I. $(foreach dir,$(SOURCE_DIR),-I$(dir))
-#DEBUG = -g
-CXXFLAGS = -std=c++11 -Wall -O2 $(INCLUDES) $(DEBUG)
-LDFLAGS  = -pthread
-#LDFLAGS = -lrt -lpthread -lboost_regex -L/path/to/boost/lib -pg
-LD = $(GXX)
+INCLUDES = -I.
+CXXFLAGS = -std=c++11 -Wall -O2 $(INCLUDES)
 CXX = $(GXX)
+LD = $(GXX)
 
-TEXT_TEMPLATE = "\033[36mTEXT\033[0m"
-COMMA = ","
-
-TARGET = main
-
-SOURCE_DIR = \
-$(shell find . -type d \( ! -path '*/.*' -o -prune \) \( ! -name ".*" \))
+SOURCE_DIR = analysis index query scorer util
 SOURCE_FILES = \
-$(wildcard *.cpp) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.cpp))
+$(wildcard *.cc) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.cc))
+SOURCE_TESTS = \
+$(wildcard *test.cc) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*test.cc))
+SOURCE_MAINS = \
+$(wildcard *main.cc) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*main.cc))
+SOURCE_LIBS = $(filter-out $(SOURCE_TESTS) $(SOURCE_MAINS),$(SOURCE_FILES))
 
-#OBJS = $(patsubst %.cpp,%.o,$(SOURCE_FILES))
-OBJS = $(SOURCE_FILES:.cpp=.o)
-DEPS = $(SOURCE_FILES:.cpp=.d)
+LIB_OBJS = $(SOURCE_LIBS:.cc=.o)
+DEPS = $(SOURCE_FILES:.cc=.d)
+TESTS = $(SOURCE_TESTS:.cc=)
+MAINS = $(SOURCE_MAINS:.cc=)
 
 EXISTED_DEPS = \
 $(wildcard *.d) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.d))
 EXISTED_OBJS = \
 $(wildcard *.o) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*.o))
+EXISTED_TESTS = \
+$(wildcard *test) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*test))
+EXISTED_MAINS = \
+$(wildcard *main) $(foreach dir,$(SOURCE_DIR),$(wildcard $(dir)/*main))
 
-%.o: %.cpp
-	@echo $(subst TEXT,"Compiling $< and Generating its Dependencies ...",$(TEXT_TEMPLATE))
+all: main test
+
+main: $(MAINS)
+
+test: $(TESTS)
+
+%.o: %.cc
+	@echo Compiling $< and Generating its Dependencies ...
 	$(CXX) -c $(CXXFLAGS) -MMD -o $@ $<
 
-$(TARGET): $(OBJS)
-	@echo $(subst TEXT,"Generating Target file: $@ ...",$(TEXT_TEMPLATE))
-	$(LD) $^ -o $@ $(LDFLAGS)
-	@echo $(subst TEXT,"All Done.",$(TEXT_TEMPLATE))
+%main: %main.o $(LIB_OBJS)
+	@echo Generating Main: $@ ...
+	$(LD) -o $@ $^ $(LDFLAGS)
+	@echo Main $@ Done.
+
+%test: %test.o $(LIB_OBJS)
+	@echo Generating Test: $@ ...
+	$(LD) -o $@ $^ $(LDFLAGS)
+	@echo Test $@ Done.
 
 -include $(DEPS)
 
 clean:
-	@echo $(subst TEXT,"Removing $(TARGET).",$(TEXT_TEMPLATE))
-	@$(RM) $(TARGET)
-	@echo $(subst TEXT,"Removing Object Files.",$(TEXT_TEMPLATE))
+	@echo Removing Main Objects.
+	@$(RM) $(EXISTED_MAINS)
+	@echo Removing Test Objects.
+	@$(RM) $(EXISTED_TESTS)
+	@echo Removing Object Files.
 	@$(RM) $(EXISTED_OBJS)
-	@echo $(subst TEXT,"Removing Dependency Files.",$(TEXT_TEMPLATE))
+	@echo Removing Dependency Files.
 	@$(RM) $(EXISTED_DEPS)
-	@echo $(subst TEXT,"All Clean.",$(TEXT_TEMPLATE))
+	@echo All Clean.
 
-.PHONY: clean
+.PHONY: all clean main test
+.SECONDARY: $(EXISTED_OBJS)
