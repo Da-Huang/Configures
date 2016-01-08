@@ -1,6 +1,8 @@
 [SwitchyOmega Conditions]
 @with result
 
+*.ytimg.com +acosine
+*.google.com.hk +acosine
 UrlWildcard: *.126.* +direct
 UrlWildcard: *162.105.* +direct
 UrlWildcard: *.163.* +direct
@@ -61,15 +63,14 @@ UrlWildcard: *.*.*.*/youku/* +direct
 UrlWildcard: */youku/* +direct
 UrlWildcard: *.youku.* +direct
 UrlWildcard: *.ytimg.* +direct
-UrlWildcard: *mail.google.com/* +direct
-UrlWildcard: *talkgadget.google.com/* +direct
 UrlWildcard: *.gtimg.* +direct
 UrlWildcard: *.ele.* +direct
 UrlWildcard: *.flvcd.* +direct
 UrlWildcard: *hihocoder.* +direct
 UrlWildcard: *weishi.* +direct
 UrlWildcard: *iqiyi.* +direct
-UrlWildcard: *dmhy.* +direct
 UrlWildcard: *csdn.* +direct
+UrlWildcard: *.youdao.* +direct
+UrlWildcard: *.dianping.* +direct
 
 * +acosine
