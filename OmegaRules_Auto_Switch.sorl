@@ -25,7 +25,6 @@ UrlWildcard: *collabedit.* +direct
 UrlWildcard: *.*.edu.cn* +direct
 UrlWildcard: *.ggpht.* +direct
 UrlWildcard: *guzzservices* +direct
-UrlWildcard: *hdslb* +direct
 UrlWildcard: *.ipinyou.* +direct
 UrlWildcard: *.irs01.* +direct
 UrlWildcard: *.jd.* +direct
