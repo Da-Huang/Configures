@@ -1,75 +1,14 @@
 [SwitchyOmega Conditions]
 @with result
 
-*.ytimg.com +acosine
-*.google.com.hk +acosine
-UrlWildcard: *.126.* +direct
-UrlWildcard: *162.105.* +direct
-UrlWildcard: *.163.* +direct
-UrlWildcard: *.*.163.* +direct
-UrlWildcard: *.51node.* +direct
-UrlWildcard: *.acgvideo.* +direct
-UrlWildcard: *.*.admaster.* +direct
-UrlWildcard: *.*.alibaba.* +direct
-UrlWildcard: *.alicdn.* +direct
-UrlWildcard: *.*.aliimg.* +direct
-UrlWildcard: *.allyes.* +direct
-UrlWildcard: *.baidu*.* +direct
-UrlWildcard: *.bdimg.* +direct
-UrlWildcard: *.bdstatic.* +direct
-UrlWildcard: *.bdwm.* +direct
-UrlWildcard: *.bilibili.* +direct
-UrlWildcard: *.blogger.* +direct
-UrlWildcard: *.cnzz.* +direct
-UrlWildcard: *collabedit.* +direct
-UrlWildcard: *.*.edu.cn* +direct
-UrlWildcard: *.ggpht.* +direct
-UrlWildcard: *guzzservices* +direct
-UrlWildcard: *.ipinyou.* +direct
-UrlWildcard: *.irs01.* +direct
-UrlWildcard: *.jd.* +direct
-UrlWildcard: *.kejet.* +direct
-UrlWildcard: *.kkkmh.* +direct
-UrlWildcard: */letv-gug/* +direct
-UrlWildcard: *.letv*.* +direct
-UrlWildcard: */letv-uts/* +direct
-UrlWildcard: */flvfiles/* +direct
-UrlWildcard: *.miaozhen.* +direct
-UrlWildcard: *.mofamulu.* +direct
-UrlWildcard: *.*netease.* +direct
-UrlWildcard: *.netease.* +direct
-UrlWildcard: *.poco.* +direct
-UrlWildcard: *.qianqian.* +direct
-UrlWildcard: *.sina.* +direct
-UrlWildcard: *.sinaimg.* +direct
-UrlWildcard: *.*.sohu.* +direct
-UrlWildcard: *.soku.* +direct
-UrlWildcard: *.tanx.* +direct
-UrlWildcard: *.taobao*.* +direct
-UrlWildcard: *.*.taobao*.* +direct
-UrlWildcard: *.tbcdn.* +direct
-UrlWildcard: *.tdimg.* +direct
-UrlWildcard: *.tudou.* +direct
-UrlWildcard: *.tudouui.* +direct
-UrlWildcard: *weibo.com* +direct
-UrlWildcard: *.xiu8.* +direct
-UrlWildcard: *.xunlei.* +direct
-UrlWildcard: *.yeah.* +direct
-UrlWildcard: *.yimgr.* +direct
-UrlWildcard: *.ykimg.* +direct
-UrlWildcard: *.*.youku.* +direct
-UrlWildcard: *.*.*.*/youku/* +direct
-UrlWildcard: */youku/* +direct
-UrlWildcard: *.youku.* +direct
-UrlWildcard: *.ytimg.* +direct
-UrlWildcard: *.gtimg.* +direct
-UrlWildcard: *.ele.* +direct
-UrlWildcard: *.flvcd.* +direct
-UrlWildcard: *hihocoder.* +direct
-UrlWildcard: *weishi.* +direct
-UrlWildcard: *iqiyi.* +direct
-UrlWildcard: *csdn.* +direct
-UrlWildcard: *.youdao.* +direct
-UrlWildcard: *.dianping.* +direct
+*.bilibili.com +direct
+*.edu.cn +direct
+UrlWildcard: https://wx2.qq.com/ +direct
+*.163.com +direct
+*.126.net +direct
+*.netease.com +direct
+*.wrating.com +direct
+*.cnzz.com +direct
+*.127.net +direct
 
 * +acosine
