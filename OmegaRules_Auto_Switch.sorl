@@ -6,22 +6,33 @@
 *.163.com +direct
 *.alicdn.com +direct
 *.alimama.cn +direct
+*.baidu.com +direct
+*.baidustatic.com +direct
+*.bdimg.com +direct
+*.bdstatic.com +direct
 *.bilibili.com +direct
 *.cnzz.com +direct
 *.edu.cn +direct
 *.kukuku.cc +direct
+*.mediav.com +direct
 *.mmcdn.cn +direct
 *.mmstat.com +direct
 *.netease.com +direct
 *.sina.cn +direct
 *.sinaimg.cn +direct
 *.sinajs.cn +direct
+*.staticfile.org +direct
 *.tanx.com +direct
 *.taobao.com +direct
 *.taobaocdn.com +direct
 *.tbcdn.cn +direct
+*.tiebaimg.com +direct
 *.weibo.com +direct
 *.wrating.com +direct
+*.ydstatic.com +direct
+*.youdao.com +direct
+*.zhihu.com +direct
+*.zhimg.com +direct
 UrlWildcard: https://wx2.qq.com/ +direct
 
 * +acosine
