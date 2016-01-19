@@ -1,2 +1,5 @@
 # Entry for /dev/sda1 -- DISK_C
 UUID=7296E49296E457DD                     /media/DISK_C   ntfs    rw,suid,dev,exec,auto,nouser,async,umask=002,uid=1000,gid=1000 0       0
+
+# Entry for /dev/sda2 -- c
+UUID=6ED017E7D017B3F5                     /media/c        ntfs    rw,suid,dev,exec,auto,nouser,async,remove_hiberfile,umask=002,uid=1000,gid=1000 0       0
