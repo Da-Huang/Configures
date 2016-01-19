@@ -1,14 +1,27 @@
 [SwitchyOmega Conditions]
 @with result
 
-*.bilibili.com +direct
-*.edu.cn +direct
-UrlWildcard: https://wx2.qq.com/ +direct
-*.163.com +direct
 *.126.net +direct
-*.netease.com +direct
-*.wrating.com +direct
-*.cnzz.com +direct
 *.127.net +direct
+*.163.com +direct
+*.alicdn.com +direct
+*.alimama.cn +direct
+*.bilibili.com +direct
+*.cnzz.com +direct
+*.edu.cn +direct
+*.kukuku.cc +direct
+*.mmcdn.cn +direct
+*.mmstat.com +direct
+*.netease.com +direct
+*.sina.cn +direct
+*.sinaimg.cn +direct
+*.sinajs.cn +direct
+*.tanx.com +direct
+*.taobao.com +direct
+*.taobaocdn.com +direct
+*.tbcdn.cn +direct
+*.weibo.com +direct
+*.wrating.com +direct
+UrlWildcard: https://wx2.qq.com/ +direct
 
 * +acosine
