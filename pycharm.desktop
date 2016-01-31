@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=eclipse
-Exec=eclipse
+Name=pycharm
+Exec=pycharm
 Terminal=false
-Icon=/usr/share/eclipse/icon.xpm
+Icon=/usr/share/pycharm/bin/pycharm.png
 Type=Application
 Categories=Development
