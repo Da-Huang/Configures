@@ -1,0 +1,22 @@
+[SwitchyOmega Conditions]
+@with result
+
+*.dmhy.org +acosine
+*.facebook.com +acosine
+*.ggpht.com +acosine
+*.google.com +acosine
+*.google.com.hk +acosine
+*.googleapis.com +acosine
+*.googleusercontent.com +acosine
+*.googlevideo.com +acosine
+*.gravatar.com +acosine
+*.gstatic.com +acosine
+*.twitter.com +acosine
+*.wikipedia.org +acosine
+*.wp.com +acosine
+*.xmodulo.com +acosine
+*.youtube-nocookie.com +acosine
+*.youtube.com +acosine
+*.ytimg.com +acosine
+
+* +direct
