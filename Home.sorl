@@ -1,8 +1,11 @@
 [SwitchyOmega Conditions]
 @with result
 
+*.atlassian.com +acosine
 *.dmhy.org +acosine
 *.facebook.com +acosine
+*.fbcdn.net +acosine
+*.ga-beacon.appspot.com +acosine
 *.ggpht.com +acosine
 *.google.com +acosine
 *.google.com.hk +acosine
@@ -11,6 +14,9 @@
 *.googlevideo.com +acosine
 *.gravatar.com +acosine
 *.gstatic.com +acosine
+*.mathjax.org +acosine
+*.nicovideo.jp +acosine
+*.optimizely.com +acosine
 *.twitter.com +acosine
 *.wikipedia.org +acosine
 *.wp.com +acosine
