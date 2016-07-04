@@ -58,11 +58,14 @@ set statusline+=%F::%l,%c
 set backspace=indent,eol,start
 set showmode
 set hls
+set colorcolumn=80
 set ff=unix
 set fileencodings=utf8,gb18030
 set viminfo='50,<1000
-au BufWritePre * :%s/\s\+$//e
-autocmd FileType make setlocal noexpandtab
+au FileType make setlocal noexpandtab
+
+highlight TailingWhitespace ctermbg=red guibg=red
+match TailingWhitespace /\s\+$/
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
