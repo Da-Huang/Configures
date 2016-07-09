@@ -2,8 +2,10 @@
 @with result
 
 *.atlassian.com +acosine
+*.coursera.org +acosine
 *.dmhy.org +acosine
 *.facebook.com +acosine
+*.facebook.net +acosine
 *.fbcdn.net +acosine
 *.ga-beacon.appspot.com +acosine
 *.ggpht.com +acosine
@@ -16,13 +18,17 @@
 *.gstatic.com +acosine
 *.mathjax.org +acosine
 *.nicovideo.jp +acosine
+*.nocookie.net +acosine
 *.optimizely.com +acosine
+*.quantserve.com +acosine
 *.twitter.com +acosine
+*.wikia.com +acosine
 *.wikipedia.org +acosine
 *.wp.com +acosine
 *.xmodulo.com +acosine
 *.youtube-nocookie.com +acosine
 *.youtube.com +acosine
 *.ytimg.com +acosine
+UrlWildcard: *://gist.github.com* +acosine
 
 * +direct
